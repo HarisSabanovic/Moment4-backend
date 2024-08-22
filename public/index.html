@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrering</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+
+
+    <form id="registration-form">
+        <fieldset>
+            <legend>Skapa konto</legend>
+
+        <label for="firstName">Förnamn: </label>
+        <input type="text" id="firstName" placeholder="Förnamn..." required>
+
+        <label for="lastName">Efternamn: </label>
+        <input type="text" id="lastName" placeholder="Efternamn..." required>
+
+        <label for="e-mail">E-mejl: </label>
+        <input type="email" id="e-mail" placeholder="E-mejl..." required>
+
+        <label for="userName">Användarnman</label>
+        <input type="text" id="userName" placeholder="Användarnman..." required>
+
+        <label for="password">Lösenord: </label>
+        <input type="password" id="password" placeholder="Lösenord..." required>
+
+        <input type="submit" id="submitBtn">
+        </fieldset>
+    </form>
+    
+    <div id="notice" class="hidden"></div>
+    <div id="errorNotice" class="hidden"></div>
+</body>
+</html>
