@@ -32,6 +32,11 @@ router.post("/register", async (req, res) => {
              return res.status(400).json({ error: "Invalid password"});
         }
 
+        const existingUser = await User.findOne({ username });
+        if (existingUser) {
+            return res.status(400).json({ error: "Username already taken" });
+        }
+
         //correct - save user
         const user = new User({username, password});
         await user.save();
