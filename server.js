@@ -7,6 +7,7 @@ require("dotenv").config();
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.static("public"));
 
 let port = process.env.PORT;
 
