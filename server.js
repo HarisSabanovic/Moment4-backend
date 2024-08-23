@@ -16,7 +16,7 @@ app.use("/api", authRoutes);
 
 //protected route
 app.get("/api/protected", authenticateToken, (req, res) => {
-    res.json({ message: "Inloggad på skyddad server"})
+    res.json({ message: "Inloggad på skyddad server"});
 })
 
 //validate token
