@@ -15,6 +15,20 @@
                 return;
             }
         })
+        
+        document.addEventListener("DOMContentLoaded", function () {
+          const logoutButton = document.getElementById("logout");
+
+          if (logoutButton) {
+            logoutButton.addEventListener("click", function () {
+               // Ta bort token från localStorage
+               localStorage.removeItem("token");
+            
+               // Omdirigera till inloggningssidan
+               window.location.href = "login.html";
+            });
+         }
+      });
     </script>
 </head>
 <body>
@@ -23,11 +37,17 @@
         <nav>
             <ul>
                 <li><a href="admin.html">Admin</a></li>
+                <li><a href="#" id="logout">Logga ut</a></li>
             </ul>
         </nav>
     </header>
 
-    <h1>Välkommen</h1>
-    
+    <div class="container">
+        <h1>Under Utveckling</h1>
+        <p>Vi arbetar på att förbättra vår webbplats. Snart kommer den att vara tillgänglig igen.</p>
+        <p>Vi tackar för ditt tålamod.</p>
+        <div class="loader"></div>
+    </div>
+
 </body>
 </html>
